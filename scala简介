@@ -1,0 +1,12 @@
+Scala 是一门以java虚拟机（jvm)为运行环境，并将面向对象和函数式编程的最佳特性结合在一起的静态类型编程语言
+object HelloScala{
+  def main(args:Array[String]):Unit = {
+    print(''hello'')
+  }
+}
+def:表示是一个方法，这是一个关键字
+main 表示方法名字，表示程序入口
+args:Array[String] 表示形参，scala的特点是将参数名在前，类型在后
+Array[String] 表示类型是一个数组
+Unit=表示该函数的返回值是空（void)
+scala的编译器可以编译Java，但是java的编译器无法编译scala
