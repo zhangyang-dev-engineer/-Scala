@@ -10,3 +10,24 @@ args:Array[String] 表示形参，scala的特点是将参数名在前，类型�
 Array[String] 表示类型是一个数组
 Unit=表示该函数的返回值是空（void)
 scala的编译器可以编译Java，但是java的编译器无法编译scala
+
+Scala执行流程分析：
+	.scala文件（源文件）---（scalac编译）--》字节码文件（.class）scala(运行)->结果
+  Scala中得数据类型都是对象，定义变量必须要有默认值
+AnyRef引用  AnyVal值类型
+1，在scala中有一个根类型Any，它是所有类得父类
+2，scala中一切皆为对象，分为两大类AnyVal(值类型) ,AnyRef(引用类型）,他们都是Any子类
+3，Null类是scala得特别类型，它只有一个null，他是bottom class，是所有AnyRef类型得子类
+4，Nothing类型也是bottom class，它是所有类得子类，在开发中通常可以讲Nothing类得值返回给任意变量或者函数，这里抛出异常使用过很多
+5，在scala中仍最遵守低精度向高精度转换，（implicit Conversion 隐式转换）
+补码把最大的负数-0加到负数上，所以比正数多一个
+
+浮点型常量有两种方式：
+十进制：如5.12   5.12.of   必须有小数点
+科学计数法形式：如 5.12e2 = 5.12乘以10的2次方  ，5.12E-2=5.12除以10的2次方
+float 大致可以精确到7位，超过7位会丧失精度
+
+Char类型和java的差不多，unicode 码值包括ascii码
+
+1，当把一个计算的结果赋值一个变量，则编译器会进行类型转换及判断（即会看范围+类型）
+2，当把一个字面量赋值一个变量，则会进行范围判定
